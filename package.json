@@ -1,0 +1,14 @@
+{
+  "name": "mangez-des-trolls",
+  "version": "0.1.0",
+  "description": "Trelling Bot pour Twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -v"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Adriean Khisbe <adriean.khisbe@live.fr> (https://github.com/AdrieanKhisbe/)",
+  "license": "MIT"
+}
