@@ -8,12 +8,14 @@
     "test": "lab -v"
   },
   "keywords": [
-    "bot"
+    "bot",
+    "twitter",
+    "streaming"
   ],
   "author": "Adriean Khisbe <adriean.khisbe@live.fr> (https://github.com/AdrieanKhisbe/)",
   "license": "MIT",
   "dependencies": {
-    "twitter": "^1.2.5"
+    "twit": "^2.1.1"
   },
   "devDependencies": {
     "code": "^2.1.0",
