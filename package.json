@@ -4,6 +4,7 @@
   "description": "Trelling Bot pour Twitter",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "lab -v"
   },
   "keywords": [
@@ -13,5 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "twitter": "^1.2.5"
+  },
+  "devDependencies": {
+    "code": "^2.1.0",
+    "lab": "^8.0.2"
   }
 }
