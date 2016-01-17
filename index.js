@@ -32,7 +32,8 @@ tb.T.get('search/tweets', { q: '#touchepasauxguignols #lesguignols from:SauvonsG
 //*/
 console.log('starting to watch bash to keyword #pomme')
 tb.watch({track: '#pomme'}, (tweet) => {
-    tb.postRetweet(tweet.id_str)
+    console.log('Retweeting "%s" by %s', tweet.text, tweet.user.name);
+    tb.postRetweet(tweet.id_str);
 })
 
 const port = process.env.PORT || 3000
