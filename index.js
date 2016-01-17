@@ -1,6 +1,7 @@
 'use strict';
 
-const TwitBot = require('./lib/twit-bot')
+const TwitBot = require('./lib/twit-bot');
+const Http = require('http');
 
 var args = process.argv.slice(2);
 
@@ -33,3 +34,9 @@ console.log('starting to watch bash to keyword #pomme')
 tb.watch({track: '#pomme'}, (tweet) => {
     tb.postRetweet(tweet.id_str)
 })
+
+const port = process.env.PORT || 3000
+Http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('https://twitter.com/MangezDesPaumes');
+}).listen(port, () => console.log('NanoServer started on port %d', port));
