@@ -1,4 +1,4 @@
-# Mangez des Trolls
+# Mangez des Paumes :green_apple: :apple: :wink:
 
 [![npm version][npm-badge]][npm-url]
 [![experimental][experimental-badge]][experimental-url]
