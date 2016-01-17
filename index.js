@@ -17,3 +17,7 @@ console.log(config)
 
 
 var T = new Twit(config)
+T.post('statuses/update', { status: 'Helllllllllllooooooowwww' }, function(err, data, response) {
+    if (err) console.err('Dawn it, it failed:\n%s', err)
+    else console.log(data)
+})
