@@ -4,7 +4,7 @@
   "description": "Trelling Bot pour Twitter",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index $CK $CS $AT $ATS",
     "test": "lab -v"
   },
   "keywords": [
