@@ -49,3 +49,4 @@ function watch(pattern, callback) {
     stream.on('tweet', callback)
 }
 
+watch({track: '#NecMergitur'}, (tweet) => console.log(tweet))
