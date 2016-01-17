@@ -1,4 +1,5 @@
 var Twit = require('twit')
+var Fs = require('fs')
 
 var args = process.argv.slice(2);
 
@@ -17,7 +18,20 @@ console.log(config)
 
 
 var T = new Twit(config)
-T.post('statuses/update', { status: 'Helllllllllllooooooowwww' }, function(err, data, response) {
-    if (err) console.err('Dawn it, it failed:\n%s', err)
-    else console.log(data)
+var b64content = Fs.readFileSync('images/guignols-win.jpg', { encoding: 'base64' })
+
+// first we must post the media to Twitter
+T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+
+    if(err) return console.error('Uploading img failed')
+
+    // now we can reference the media and post a tweet (media will attach to the tweet)
+    var mediaIdStr = data.media_id_string
+    var params = { status: 'Ca a marchéé! ', media_ids: [mediaIdStr] }
+
+    T.post('statuses/update', params, function (err, data, response) {
+      if (err) console.error('Post twit a échoué failed')
+      else console.log('Post twit réussi')
+
+    })
 })
