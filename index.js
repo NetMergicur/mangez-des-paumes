@@ -11,7 +11,7 @@ if (args.length !== 4) {
 
 const config = {
     consumer_key: args[0], consumer_secret: args[1],
-    access_token: args[2] , access_token_secret: args[3]
+    access_token: args[2], access_token_secret: args[3]
 }
 console.log('config:')
 console.log(config)
@@ -19,8 +19,8 @@ console.log(config)
 
 var T = new Twit(config)
 
-function postTweet(status){
-    T.post('statuses/update', { status: status }, function(err, data, response) {
+function postTweet(status) {
+    T.post('statuses/update', {status: status}, function (err, data, response) {
         if (err) console.err('Dawn it, it failed:\n%s', err)
         console.log('Successful post of twitt: %s', status)
     })
@@ -43,3 +43,9 @@ function postImage(path, status) {
         })
     })
 }
+
+function watch(pattern, callback) {
+    var stream = T.stream('statuses/filter', pattern)
+    stream.on('tweet', callback)
+}
+
