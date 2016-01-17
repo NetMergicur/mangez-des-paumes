@@ -10,11 +10,16 @@
 
 > **Trolleur Cibleur pour Twiteur**
 
+[![Twitte Wall][twit-img]][twit-url]
 
 # A propos
 
 Basé sur [APi de streaming de twitter](https://dev.twitter.com/streaming/public)
 and [node `twit twitter API client](https://github.com/ttezel/twit).
+
+
+[twit-img]: ./images/twitter-wall.png?raw=true
+[twit-url]: https://twitter.com/MangezDesPaumes
 
 [npm-badge]: https://img.shields.io/npm/v/mangez-des-paumes.svg
 [npm-url]: https://npmjs.com/package/mangez-des-paumes
