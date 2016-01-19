@@ -37,7 +37,7 @@ tb.watch({track: '#pomme'}, (tweet) => {
 })
 tb.watch({track: '#pommes'}, (tweet) => {
     console.log('Retweeting "%s" by %s', tweet.text, tweet.user.name);
-    tb.postRetweet(tweet.id_str, "Une #pomme avertie en vaut deux! 🍏  🍎");
+    tb.postRetweet(tweet, "Une #pomme avertie en vaut deux! 🍏  🍎");
 })
 
 // TODO: like
