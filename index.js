@@ -15,7 +15,7 @@ const config = {
     consumer_key: args[0], consumer_secret: args[1],
     access_token: args[2], access_token_secret: args[3]
 }
-console.log('Launching config bot with following config:\n%s', config)
+console.log('Launching config bot with following config:\n%j', config)
 
 var tb = new TwitBot(config)
 
