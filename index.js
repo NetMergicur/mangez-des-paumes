@@ -39,6 +39,11 @@ tb.watch({track: '#pommes'}, (tweet) => {
     console.log('Retweeting "%s" by %s', tweet.text, tweet.user.name);
     tb.postRetweet(tweet, "Une #pomme avertie en vaut deux! 🍏  🍎");
 })
+tb.watch({track: '#TwitterDown'}, (tweet) => {
+    const username = tweet.user.screen_name;
+    console.log(`https://twitter.com/${username ? `${username}/status` : '/statuses'  }/${tweet.id_str}`)
+})
+
 
 // TODO: like
 
