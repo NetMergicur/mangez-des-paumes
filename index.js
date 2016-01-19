@@ -35,6 +35,13 @@ tb.watch({track: '#pomme'}, (tweet) => {
     console.log('Retweeting "%s" by %s', tweet.text, tweet.user.name);
     tb.postRetweet(tweet.id_str);
 })
+tb.watch({track: '#pommes'}, (tweet) => {
+    console.log('Retweeting "%s" by %s', tweet.text, tweet.user.name);
+    tb.postRetweet(tweet.id_str, "Une #pomme avertie en vaut deux! 🍏  🍎");
+})
+
+// TODO: like
+
 
 const port = process.env.PORT || 3000
 Http.createServer(function (req, res) {
