@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index $CK $CS $AT $ATS",
-    "test": "lab -v"
+    "test": "lab -v",
+    "coverage": "lab -r lcov -o coverage/lab.lcov -r html -o coverage/index.html",
+    "publish-coverage": "codeclimate-test-reporter < coverage/lab.lcov"
   },
   "keywords": [
     "bot",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "code": "^2.1.0",
+    "codeclimate-test-reporter": "^0.3.0",
     "lab": "^8.0.2"
   }
 }

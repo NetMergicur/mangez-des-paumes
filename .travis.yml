@@ -8,3 +8,11 @@ node_js:
 cache:
   directories:
     node_modules
+
+after_script:
+  - npm run coverage
+  - npm run publish-coverage
+
+addons:
+  code_climate:
+    repo_token: 2007f6c62eaced3a20b5ab6f0e7418964f1cd955aefc47f97de4fbe38c46a812
